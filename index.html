@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CrickRazz — Live Ball-by-ball AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>CrickRazz</h1>
+      <p class="subtitle">লাইভ ম্যাচ দেখুন — বল-বল প্রেডিকশন ও জয় সম্ভাবনা</p>
+    </header>
+
+    <section class="controls">
+      <label>
+        API Provider:
+        <select id="provider">
+          <option value="sportmonks">SportMonks</option>
+          <option value="cricketdata">CricketData</option>
+          <option value="custom">Custom (manual endpoints)</option>
+        </select>
+      </label>
+
+      <label>
+        API Key:
+        <input id="apiKey" type="text" placeholder="Your API key here" />
+      </label>
+
+      <label id="customEndpointLabel" style="display:none;">
+        Custom Live Matches URL:
+        <input id="customMatchesUrl" type="text" placeholder="https://api.example.com/live-matches" />
+      </label>
+
+      <button id="startBtn">Start Live Updates</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <small class="note">পোলিং ইন্টারভ্যাল: <span id="intervalVal">10</span>s</small>
+      <input id="interval" type="range" min="5" max="60" value="10" />
+    </section>
+
+    <main id="matchesContainer">
+      <!-- লাইভ ম্যাচ কার্ড এখানে যোগ হবে -->
+    </main>
+
+    <footer>
+      <p>Note: Use a valid cricket live-data API and configure provider mapping in <code>script.js</code>.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

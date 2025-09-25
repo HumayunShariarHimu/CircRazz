@@ -1,0 +1,124 @@
+/* style.css - clean simple layout */
+:root{
+  --bg:#f4f7fb;
+  --card:#fff;
+  --accent:#1f78d1;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Noto Sans Bengali", Arial, sans-serif;
+  background:var(--bg);
+  color:#111827;
+}
+.app{
+  max-width:1100px;
+  margin:28px auto;
+  padding:18px;
+}
+header{
+  text-align:center;
+  margin-bottom:14px;
+}
+h1{margin:0;font-size:28px;color:var(--accent)}
+.subtitle{margin:6px 0;color:var(--muted)}
+
+.controls{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:14px;
+}
+.controls label{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  background:var(--card);
+  padding:8px 10px;
+  border-radius:8px;
+  box-shadow:0 1px 4px rgba(2,6,23,0.06);
+}
+.controls input[type="text"], .controls select{
+  padding:6px 8px;
+  border-radius:6px;
+  border:1px solid #e5e7eb;
+  min-width:180px;
+}
+.controls button{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  cursor:pointer;
+}
+.controls button[disabled]{opacity:0.5;cursor:not-allowed}
+.controls .note{margin-left:8px;color:var(--muted)}
+
+main#matchesContainer{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:12px;
+}
+
+/* Match card */
+.match-card{
+  background:var(--card);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 6px 18px rgba(15,23,42,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.match-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.match-title{font-weight:700}
+.match-meta{color:var(--muted);font-size:13px}
+
+.score-row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.metric{
+  background:#f1f5f9;
+  padding:6px 8px;
+  border-radius:8px;
+  font-weight:600;
+}
+
+.history{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.history .ball{
+  width:34px;height:34px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  background:#eef2ff;color:#1f2937;font-weight:700;
+  box-shadow:0 1px 4px rgba(2,6,23,0.04);
+}
+
+.predictions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-top:8px;
+}
+.pred-box{
+  background:#f8fafc;padding:8px;border-radius:8px;flex:1;
+}
+.pred-box h4{margin:0 0 6px 0;font-size:14px}
+.pred-big{font-size:20px;font-weight:800;color:var(--accent)}
+
+/* footer */
+footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
